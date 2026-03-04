@@ -1,0 +1,7 @@
+name: 'dbt_test'
+version: '1.0.0'
+config-version: 2
+
+profile: 'DBT_TEST'
+
+model-paths: ["models"]

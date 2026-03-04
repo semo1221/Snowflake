@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: marketing
+    database: P_SOURCE_DB
+    schema: P_SOURCE_SCHEMA
+
+    tables:
+      - name: P_CAMPAIGNS

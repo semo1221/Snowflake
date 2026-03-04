@@ -1,0 +1,418 @@
+
+
+============================== 10:36:27.393504 | b4cc1d66-d734-40c6-b03e-dd143e8cfc4c ==============================
+[0m10:36:27.393504 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m10:36:27.394633 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/tmp/dbt/', 'version_check': 'True', 'debug': 'False', 'log_path': '/tmp/dbt/logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt ', 'static_parser': 'True', 'target_path': '/tmp/dbt/target/', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'False'}
+[0m10:36:27.466848 [error] [Dummy-1   ]:  adapter: Invalid profile: 'user' is a required property.
+[0m10:36:27.766015 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m10:36:28.339624 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m10:36:28.341171 [info ] [Dummy-1   ]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m10:36:29.952970 [error] [Dummy-1   ]: Encountered an error:
+Compilation Error
+  Model 'model.dbt_test.mart_campaign_channel_cost' (models/mart_campaign_channel_cost.sql) depends on a source named 'marketing.p_campaigns' which was not found
+[0m10:36:29.955121 [debug] [Dummy-1   ]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 2.6606467, "process_in_blocks": "0", "process_kernel_time": 0.92, "process_mem_max_rss": "459972", "process_out_blocks": "0", "process_user_time": 5.91}
+[0m10:36:29.955915 [debug] [Dummy-1   ]: Command `cli run` failed at 10:36:29.955620 after 2.66 seconds
+[0m10:36:29.956560 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 10:36:52.603506 | d8176e3d-0ef3-4e3c-a14a-c945f60b7583 ==============================
+[0m10:36:52.603506 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m10:36:52.604614 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/tmp/dbt/logs', 'debug': 'False', 'profiles_dir': '/tmp/dbt/', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': '/tmp/dbt/target/', 'invocation_command': 'dbt ', 'send_anonymous_usage_stats': 'False'}
+[0m10:36:52.677176 [error] [Dummy-1   ]:  adapter: Invalid profile: 'user' is a required property.
+[0m10:36:52.974811 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m10:36:53.550220 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m10:36:53.551812 [info ] [Dummy-1   ]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m10:36:55.411531 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m10:36:55.413990 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m10:36:55.464302 [info ] [Dummy-1   ]: Found 1 model, 1 source, 474 macros
+[0m10:36:55.466508 [info ] [Dummy-1   ]: 
+[0m10:36:55.467118 [info ] [Dummy-1   ]: Concurrency: 1 threads (target='dev')
+[0m10:36:55.467593 [info ] [Dummy-1   ]: 
+[0m10:36:55.468507 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m10:36:55.470497 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_P_MART'
+[0m10:36:55.578063 [debug] [ThreadPool]: Using snowflake connection "list_P_MART"
+[0m10:36:55.578859 [debug] [ThreadPool]: On list_P_MART: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "DBT_TEST", "target_name": "dev", "connection_name": "list_P_MART"} */
+show terse schemas in database P_MART
+    limit 10000
+[0m10:36:55.579450 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:36:55.857556 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 0.278 seconds
+[0m10:36:55.862156 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_P_MART_P_MART_SCHEMA'
+[0m10:36:55.879232 [debug] [ThreadPool]: Using snowflake connection "list_P_MART_P_MART_SCHEMA"
+[0m10:36:55.879873 [debug] [ThreadPool]: On list_P_MART_P_MART_SCHEMA: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "DBT_TEST", "target_name": "dev", "connection_name": "list_P_MART_P_MART_SCHEMA"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m10:36:55.880354 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:36:56.163534 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.283 seconds
+[0m10:36:56.169546 [debug] [ThreadPool]: Using snowflake connection "list_P_MART_P_MART_SCHEMA"
+[0m10:36:56.170194 [debug] [ThreadPool]: On list_P_MART_P_MART_SCHEMA: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "DBT_TEST", "target_name": "dev", "connection_name": "list_P_MART_P_MART_SCHEMA"} */
+show objects in P_MART.P_MART_SCHEMA
+    limit 10000
+    
+;
+[0m10:36:56.228175 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.057 seconds
+[0m10:36:56.230929 [debug] [ThreadPool]: Using snowflake connection "list_P_MART_P_MART_SCHEMA"
+[0m10:36:56.231550 [debug] [ThreadPool]: On list_P_MART_P_MART_SCHEMA: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "DBT_TEST", "target_name": "dev", "connection_name": "list_P_MART_P_MART_SCHEMA"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m10:36:56.278792 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.046 seconds
+[0m10:36:56.286568 [debug] [Thread-2 (]: Began running node model.dbt_test.mart_campaign_channel_cost
+[0m10:36:56.287590 [info ] [Thread-2 (]: 1 of 1 START sql table model P_MART_SCHEMA.mart_campaign_channel_cost .......... [RUN]
+[0m10:36:56.288512 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_P_MART_P_MART_SCHEMA, now model.dbt_test.mart_campaign_channel_cost)
+[0m10:36:56.289158 [debug] [Thread-2 (]: Began compiling node model.dbt_test.mart_campaign_channel_cost
+[0m10:36:56.302748 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_test.mart_campaign_channel_cost"
+[0m10:36:56.303810 [debug] [Thread-2 (]: Began executing node model.dbt_test.mart_campaign_channel_cost
+[0m10:36:56.348986 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_test.mart_campaign_channel_cost"
+[0m10:36:56.351017 [debug] [Thread-2 (]: Using snowflake connection "model.dbt_test.mart_campaign_channel_cost"
+[0m10:36:56.351785 [debug] [Thread-2 (]: On model.dbt_test.mart_campaign_channel_cost: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "DBT_TEST", "target_name": "dev", "node_id": "model.dbt_test.mart_campaign_channel_cost"} */
+create or replace transient table P_MART.P_MART_SCHEMA.mart_campaign_channel_cost
+         as
+        (
+
+SELECT
+      CHANNEL
+
+    , SUM(
+        (DATEDIFF(day, START_DATE, END_DATE) + 1)
+        * COALESCE(
+            CASE CHANNEL
+                WHEN 'Paid Search' THEN 500
+                WHEN 'Display'     THEN 300
+                WHEN 'Social'      THEN 400
+                WHEN 'Email'       THEN 50
+                WHEN 'Influencer'  THEN 800
+                WHEN 'Video'       THEN 600
+                WHEN 'Mobile'      THEN 350
+            END
+        , 250)
+      ) AS TOTAL_COST
+
+FROM P_SOURCE_DB.P_SOURCE_SCHEMA.P_CAMPAIGNS
+
+GROUP BY CHANNEL
+ORDER BY TOTAL_COST DESC
+        );
+[0m10:36:56.352432 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m10:36:57.260592 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.908 seconds
+[0m10:36:57.300256 [info ] [Thread-2 (]: 1 of 1 OK created sql table model P_MART_SCHEMA.mart_campaign_channel_cost ..... [[32mSUCCESS 1[0m in 1.01s]
+[0m10:36:57.301286 [debug] [Thread-2 (]: Finished running node model.dbt_test.mart_campaign_channel_cost
+[0m10:36:57.303887 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m10:36:57.304426 [debug] [Dummy-1   ]: Connection 'list_P_MART' was properly closed.
+[0m10:36:57.304866 [debug] [Dummy-1   ]: Connection 'model.dbt_test.mart_campaign_channel_cost' was properly closed.
+[0m10:36:57.305379 [info ] [Dummy-1   ]: 
+[0m10:36:57.305902 [info ] [Dummy-1   ]: Finished running 1 table model in 0 hours 0 minutes and 1.84 seconds (1.84s).
+[0m10:36:57.306865 [debug] [Dummy-1   ]: Command end result
+[0m10:36:57.336553 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m10:36:57.339043 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m10:36:57.346796 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m10:36:57.347370 [info ] [Dummy-1   ]: 
+[0m10:36:57.348069 [info ] [Dummy-1   ]: [32mCompleted successfully[0m
+[0m10:36:57.348659 [info ] [Dummy-1   ]: 
+[0m10:36:57.349209 [info ] [Dummy-1   ]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m10:36:57.351080 [debug] [Dummy-1   ]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 4.847545, "process_in_blocks": "0", "process_kernel_time": 1.08, "process_mem_max_rss": "485284", "process_out_blocks": "0", "process_user_time": 6.34}
+[0m10:36:57.351784 [debug] [Dummy-1   ]: Command `cli run` succeeded at 10:36:57.351514 after 4.85 seconds
+[0m10:36:57.352334 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 10:39:17.744209 | d21382e0-7e92-4210-a15b-6ef7ab6d7fe3 ==============================
+[0m10:39:17.744209 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m10:39:17.745247 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/tmp/dbt/', 'log_path': '/tmp/dbt/logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt ', 'introspect': 'True', 'log_format': 'default', 'target_path': '/tmp/dbt/target/', 'static_parser': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m10:39:17.813950 [error] [Dummy-1   ]:  adapter: Invalid profile: 'user' is a required property.
+[0m10:39:18.095314 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m10:39:18.649490 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m10:39:18.880278 [debug] [Dummy-1   ]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m10:39:18.881208 [debug] [Dummy-1   ]: Partial parsing: updated file: dbt_test://models/mart_campaign_channel_cost.sql
+[0m10:39:19.308343 [error] [Dummy-1   ]: Encountered an error:
+Compilation Error
+  Model 'model.dbt_test.mart_campaign_channel_cost' (models/mart_campaign_channel_cost.sql) depends on a source named 'marketing.p_campaigns' which was not found
+[0m10:39:19.310226 [debug] [Dummy-1   ]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 1.6617209, "process_in_blocks": "0", "process_kernel_time": 1.02, "process_mem_max_rss": "458496", "process_out_blocks": "0", "process_user_time": 4.46}
+[0m10:39:19.310941 [debug] [Dummy-1   ]: Command `cli run` failed at 10:39:19.310664 after 1.66 seconds
+[0m10:39:19.311576 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 10:39:43.826954 | 11a91a0b-1c3a-479e-9aa7-316bdd714d2b ==============================
+[0m10:39:43.826954 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m10:39:43.827997 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/tmp/dbt/logs', 'debug': 'False', 'profiles_dir': '/tmp/dbt/', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt ', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': '/tmp/dbt/target/', 'introspect': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m10:39:43.896371 [error] [Dummy-1   ]:  adapter: Invalid profile: 'user' is a required property.
+[0m10:39:44.177034 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m10:39:44.723615 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m10:39:44.951724 [debug] [Dummy-1   ]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m10:39:44.952352 [debug] [Dummy-1   ]: Partial parsing enabled, no changes found, skipping parsing
+[0m10:39:45.194082 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m10:39:45.196608 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m10:39:45.244076 [info ] [Dummy-1   ]: Found 1 model, 1 source, 474 macros
+[0m10:39:45.246057 [info ] [Dummy-1   ]: 
+[0m10:39:45.246614 [info ] [Dummy-1   ]: Concurrency: 1 threads (target='dev')
+[0m10:39:45.247071 [info ] [Dummy-1   ]: 
+[0m10:39:45.247906 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m10:39:45.249919 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_P_MART'
+[0m10:39:45.352949 [debug] [ThreadPool]: Using snowflake connection "list_P_MART"
+[0m10:39:45.353579 [debug] [ThreadPool]: On list_P_MART: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "DBT_TEST", "target_name": "dev", "connection_name": "list_P_MART"} */
+show terse schemas in database P_MART
+    limit 10000
+[0m10:39:45.354066 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:39:45.639420 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 0.285 seconds
+[0m10:39:45.643545 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_P_MART_P_MART_SCHEMA'
+[0m10:39:45.660070 [debug] [ThreadPool]: Using snowflake connection "list_P_MART_P_MART_SCHEMA"
+[0m10:39:45.660642 [debug] [ThreadPool]: On list_P_MART_P_MART_SCHEMA: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "DBT_TEST", "target_name": "dev", "connection_name": "list_P_MART_P_MART_SCHEMA"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m10:39:45.661118 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:39:45.979666 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.318 seconds
+[0m10:39:45.985265 [debug] [ThreadPool]: Using snowflake connection "list_P_MART_P_MART_SCHEMA"
+[0m10:39:45.985827 [debug] [ThreadPool]: On list_P_MART_P_MART_SCHEMA: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "DBT_TEST", "target_name": "dev", "connection_name": "list_P_MART_P_MART_SCHEMA"} */
+show objects in P_MART.P_MART_SCHEMA
+    limit 10000
+    
+;
+[0m10:39:46.054251 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.068 seconds
+[0m10:39:46.056769 [debug] [ThreadPool]: Using snowflake connection "list_P_MART_P_MART_SCHEMA"
+[0m10:39:46.057360 [debug] [ThreadPool]: On list_P_MART_P_MART_SCHEMA: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "DBT_TEST", "target_name": "dev", "connection_name": "list_P_MART_P_MART_SCHEMA"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m10:39:46.106164 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.048 seconds
+[0m10:39:46.113356 [debug] [Thread-2 (]: Began running node model.dbt_test.mart_campaign_channel_cost
+[0m10:39:46.114235 [info ] [Thread-2 (]: 1 of 1 START sql table model P_MART_SCHEMA.mart_campaign_channel_cost .......... [RUN]
+[0m10:39:46.116584 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_P_MART_P_MART_SCHEMA, now model.dbt_test.mart_campaign_channel_cost)
+[0m10:39:46.117219 [debug] [Thread-2 (]: Began compiling node model.dbt_test.mart_campaign_channel_cost
+[0m10:39:46.128501 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_test.mart_campaign_channel_cost"
+[0m10:39:46.129316 [debug] [Thread-2 (]: Began executing node model.dbt_test.mart_campaign_channel_cost
+[0m10:39:46.172196 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_test.mart_campaign_channel_cost"
+[0m10:39:46.174029 [debug] [Thread-2 (]: Using snowflake connection "model.dbt_test.mart_campaign_channel_cost"
+[0m10:39:46.174721 [debug] [Thread-2 (]: On model.dbt_test.mart_campaign_channel_cost: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "DBT_TEST", "target_name": "dev", "node_id": "model.dbt_test.mart_campaign_channel_cost"} */
+create or replace transient table P_MART.P_MART_SCHEMA.mart_campaign_channel_cost
+         as
+        (
+
+SELECT
+      CHANNEL
+
+    , SUM(
+        (DATEDIFF(day, START_DATE, END_DATE) + 1)
+        * COALESCE(
+            CASE CHANNEL
+                WHEN 'Paid Search' THEN 500
+                WHEN 'Display'     THEN 300
+                WHEN 'Social'      THEN 400
+                WHEN 'Email'       THEN 50
+                WHEN 'Influencer'  THEN 800
+                WHEN 'Video'       THEN 600
+                WHEN 'Mobile'      THEN 350
+            END
+        , 250)
+      ) AS TOTAL_COST
+
+FROM P_SOURCE_DB.P_SOURCE_SCHEMA.P_CAMPAIGNS
+
+GROUP BY CHANNEL
+ORDER BY TOTAL_COST DESC
+        );
+[0m10:39:46.175361 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m10:39:47.111959 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.936 seconds
+[0m10:39:47.149562 [info ] [Thread-2 (]: 1 of 1 OK created sql table model P_MART_SCHEMA.mart_campaign_channel_cost ..... [[32mSUCCESS 1[0m in 1.03s]
+[0m10:39:47.150546 [debug] [Thread-2 (]: Finished running node model.dbt_test.mart_campaign_channel_cost
+[0m10:39:47.153138 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m10:39:47.153655 [debug] [Dummy-1   ]: Connection 'list_P_MART' was properly closed.
+[0m10:39:47.154100 [debug] [Dummy-1   ]: Connection 'model.dbt_test.mart_campaign_channel_cost' was properly closed.
+[0m10:39:47.154592 [info ] [Dummy-1   ]: 
+[0m10:39:47.155117 [info ] [Dummy-1   ]: Finished running 1 table model in 0 hours 0 minutes and 1.91 seconds (1.91s).
+[0m10:39:47.156083 [debug] [Dummy-1   ]: Command end result
+[0m10:39:47.185370 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m10:39:47.187551 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m10:39:47.195156 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m10:39:47.195678 [info ] [Dummy-1   ]: 
+[0m10:39:47.196355 [info ] [Dummy-1   ]: [32mCompleted successfully[0m
+[0m10:39:47.196830 [info ] [Dummy-1   ]: 
+[0m10:39:47.197338 [info ] [Dummy-1   ]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m10:39:47.199116 [debug] [Dummy-1   ]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 3.466058, "process_in_blocks": "0", "process_kernel_time": 0.9, "process_mem_max_rss": "426896", "process_out_blocks": "0", "process_user_time": 4.89}
+[0m10:39:47.199794 [debug] [Dummy-1   ]: Command `cli run` succeeded at 10:39:47.199527 after 3.47 seconds
+[0m10:39:47.200333 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 10:46:58.040451 | 32c0abd3-8ed3-4193-a6e1-9620decb3a16 ==============================
+[0m10:46:58.040451 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m10:46:58.041491 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/tmp/dbt/logs', 'profiles_dir': '/tmp/dbt/', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt ', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': '/tmp/dbt/target/', 'introspect': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m10:46:58.109988 [error] [Dummy-1   ]:  adapter: Invalid profile: 'user' is a required property.
+[0m10:46:58.389080 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m10:46:58.935330 [debug] [Dummy-1   ]: checksum: 33df0a7c2b064ca874e22c7c269979c0fa9a17708ce85db6c6be240b76d70fac, vars: {}, profile: , target: prd, version: 1.9.4
+[0m10:46:59.083393 [info ] [Dummy-1   ]: Unable to do partial parsing because config vars, config profile, or config target have changed
+[0m10:46:59.084105 [debug] [Dummy-1   ]: previous checksum: 33df0a7c2b064ca874e22c7c269979c0fa9a17708ce85db6c6be240b76d70fac, current checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25
+[0m10:47:00.822249 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m10:47:00.824444 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m10:47:00.870456 [info ] [Dummy-1   ]: Found 1 model, 1 source, 474 macros
+[0m10:47:00.872380 [info ] [Dummy-1   ]: 
+[0m10:47:00.872905 [info ] [Dummy-1   ]: Concurrency: 1 threads (target='prd')
+[0m10:47:00.873356 [info ] [Dummy-1   ]: 
+[0m10:47:00.874133 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m10:47:00.875933 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_P_MART'
+[0m10:47:00.976157 [debug] [ThreadPool]: Using snowflake connection "list_P_MART"
+[0m10:47:00.976772 [debug] [ThreadPool]: On list_P_MART: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "DBT_TEST", "target_name": "prd", "connection_name": "list_P_MART"} */
+show terse schemas in database P_MART
+    limit 10000
+[0m10:47:00.977264 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:47:01.275827 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 0.298 seconds
+[0m10:47:01.280117 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_P_MART_P_MART_SCHEMA'
+[0m10:47:01.296395 [debug] [ThreadPool]: Using snowflake connection "list_P_MART_P_MART_SCHEMA"
+[0m10:47:01.296984 [debug] [ThreadPool]: On list_P_MART_P_MART_SCHEMA: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "DBT_TEST", "target_name": "prd", "connection_name": "list_P_MART_P_MART_SCHEMA"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m10:47:01.297460 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:47:01.580538 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.283 seconds
+[0m10:47:01.586371 [debug] [ThreadPool]: Using snowflake connection "list_P_MART_P_MART_SCHEMA"
+[0m10:47:01.586984 [debug] [ThreadPool]: On list_P_MART_P_MART_SCHEMA: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "DBT_TEST", "target_name": "prd", "connection_name": "list_P_MART_P_MART_SCHEMA"} */
+show objects in P_MART.P_MART_SCHEMA
+    limit 10000
+    
+;
+[0m10:47:01.654249 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.067 seconds
+[0m10:47:01.656812 [debug] [ThreadPool]: Using snowflake connection "list_P_MART_P_MART_SCHEMA"
+[0m10:47:01.657384 [debug] [ThreadPool]: On list_P_MART_P_MART_SCHEMA: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "DBT_TEST", "target_name": "prd", "connection_name": "list_P_MART_P_MART_SCHEMA"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m10:47:01.717935 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.060 seconds
+[0m10:47:01.725443 [debug] [Thread-2 (]: Began running node model.dbt_test.mart_campaign_channel_cost
+[0m10:47:01.726323 [info ] [Thread-2 (]: 1 of 1 START sql table model P_MART_SCHEMA.mart_campaign_channel_cost .......... [RUN]
+[0m10:47:01.727053 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_P_MART_P_MART_SCHEMA, now model.dbt_test.mart_campaign_channel_cost)
+[0m10:47:01.727665 [debug] [Thread-2 (]: Began compiling node model.dbt_test.mart_campaign_channel_cost
+[0m10:47:01.740726 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_test.mart_campaign_channel_cost"
+[0m10:47:01.741612 [debug] [Thread-2 (]: Began executing node model.dbt_test.mart_campaign_channel_cost
+[0m10:47:01.784641 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_test.mart_campaign_channel_cost"
+[0m10:47:01.786506 [debug] [Thread-2 (]: Using snowflake connection "model.dbt_test.mart_campaign_channel_cost"
+[0m10:47:01.787213 [debug] [Thread-2 (]: On model.dbt_test.mart_campaign_channel_cost: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "DBT_TEST", "target_name": "prd", "node_id": "model.dbt_test.mart_campaign_channel_cost"} */
+create or replace transient table P_MART.P_MART_SCHEMA.mart_campaign_channel_cost
+         as
+        (
+
+SELECT
+      CHANNEL
+
+    , SUM(
+        (DATEDIFF(day, START_DATE, END_DATE) + 1)
+        * COALESCE(
+            CASE CHANNEL
+                WHEN 'Paid Search' THEN 500
+                WHEN 'Display'     THEN 300
+                WHEN 'Social'      THEN 400
+                WHEN 'Email'       THEN 50
+                WHEN 'Influencer'  THEN 800
+                WHEN 'Video'       THEN 600
+                WHEN 'Mobile'      THEN 350
+            END
+        , 250)
+      ) AS TOTAL_COST
+
+FROM P_SOURCE_DB.P_SOURCE_SCHEMA.P_CAMPAIGNS
+
+GROUP BY CHANNEL
+ORDER BY TOTAL_COST DESC
+        );
+[0m10:47:01.787835 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m10:47:03.141004 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.353 seconds
+[0m10:47:03.178729 [info ] [Thread-2 (]: 1 of 1 OK created sql table model P_MART_SCHEMA.mart_campaign_channel_cost ..... [[32mSUCCESS 1[0m in 1.45s]
+[0m10:47:03.179686 [debug] [Thread-2 (]: Finished running node model.dbt_test.mart_campaign_channel_cost
+[0m10:47:03.182288 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m10:47:03.182805 [debug] [Dummy-1   ]: Connection 'list_P_MART' was properly closed.
+[0m10:47:03.183269 [debug] [Dummy-1   ]: Connection 'model.dbt_test.mart_campaign_channel_cost' was properly closed.
+[0m10:47:03.183768 [info ] [Dummy-1   ]: 
+[0m10:47:03.184271 [info ] [Dummy-1   ]: Finished running 1 table model in 0 hours 0 minutes and 2.31 seconds (2.31s).
+[0m10:47:03.185196 [debug] [Dummy-1   ]: Command end result
+[0m10:47:03.213705 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m10:47:03.215832 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m10:47:03.222991 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m10:47:03.223511 [info ] [Dummy-1   ]: 
+[0m10:47:03.224176 [info ] [Dummy-1   ]: [32mCompleted successfully[0m
+[0m10:47:03.224641 [info ] [Dummy-1   ]: 
+[0m10:47:03.225148 [info ] [Dummy-1   ]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m10:47:03.226859 [debug] [Dummy-1   ]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 5.2797337, "process_in_blocks": "0", "process_kernel_time": 1.08, "process_mem_max_rss": "484340", "process_out_blocks": "0", "process_user_time": 5.99}
+[0m10:47:03.227546 [debug] [Dummy-1   ]: Command `cli run` succeeded at 10:47:03.227270 after 5.28 seconds
+[0m10:47:03.228077 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 14:51:14.352464 | 740ce60d-b644-42fc-a339-307be0972b74 ==============================
+[0m14:51:14.352464 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m14:51:14.353555 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/tmp/dbt/', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/tmp/dbt/logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt ', 'target_path': '/tmp/dbt/target/', 'static_parser': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m14:51:14.423392 [error] [Dummy-1   ]:  adapter: Invalid profile: 'user' is a required property.
+[0m14:51:14.708067 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m14:51:15.268408 [debug] [Dummy-1   ]: checksum: 33df0a7c2b064ca874e22c7c269979c0fa9a17708ce85db6c6be240b76d70fac, vars: {}, profile: , target: prd, version: 1.9.4
+[0m14:51:15.499727 [debug] [Dummy-1   ]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:51:15.500352 [debug] [Dummy-1   ]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:51:15.731996 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m14:51:15.734252 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m14:51:15.780971 [info ] [Dummy-1   ]: Found 1 model, 1 source, 474 macros
+[0m14:51:15.783077 [info ] [Dummy-1   ]: 
+[0m14:51:15.783621 [info ] [Dummy-1   ]: Concurrency: 1 threads (target='prd')
+[0m14:51:15.784078 [info ] [Dummy-1   ]: 
+[0m14:51:15.784864 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m14:51:15.786697 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_P_MART'
+[0m14:51:15.890694 [debug] [ThreadPool]: Using snowflake connection "list_P_MART"
+[0m14:51:15.891295 [debug] [ThreadPool]: On list_P_MART: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "DBT_TEST", "target_name": "prd", "connection_name": "list_P_MART"} */
+show terse schemas in database P_MART
+    limit 10000
+[0m14:51:15.891806 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:51:16.204439 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 0.312 seconds
+[0m14:51:16.209941 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_P_MART_P_MART_SCHEMA'
+[0m14:51:16.226516 [debug] [ThreadPool]: Using snowflake connection "list_P_MART_P_MART_SCHEMA"
+[0m14:51:16.227108 [debug] [ThreadPool]: On list_P_MART_P_MART_SCHEMA: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "DBT_TEST", "target_name": "prd", "connection_name": "list_P_MART_P_MART_SCHEMA"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m14:51:16.227601 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:51:16.517320 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.289 seconds
+[0m14:51:16.523002 [debug] [ThreadPool]: Using snowflake connection "list_P_MART_P_MART_SCHEMA"
+[0m14:51:16.523555 [debug] [ThreadPool]: On list_P_MART_P_MART_SCHEMA: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "DBT_TEST", "target_name": "prd", "connection_name": "list_P_MART_P_MART_SCHEMA"} */
+show objects in P_MART.P_MART_SCHEMA
+    limit 10000
+    
+;
+[0m14:51:16.607964 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.084 seconds
+[0m14:51:16.610362 [debug] [ThreadPool]: Using snowflake connection "list_P_MART_P_MART_SCHEMA"
+[0m14:51:16.610899 [debug] [ThreadPool]: On list_P_MART_P_MART_SCHEMA: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "DBT_TEST", "target_name": "prd", "connection_name": "list_P_MART_P_MART_SCHEMA"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m14:51:16.668226 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.057 seconds
+[0m14:51:16.675136 [debug] [Thread-2 (]: Began running node model.dbt_test.mart_campaign_channel_cost
+[0m14:51:16.675996 [info ] [Thread-2 (]: 1 of 1 START sql table model P_MART_SCHEMA.mart_campaign_channel_cost .......... [RUN]
+[0m14:51:16.678282 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_P_MART_P_MART_SCHEMA, now model.dbt_test.mart_campaign_channel_cost)
+[0m14:51:16.678993 [debug] [Thread-2 (]: Began compiling node model.dbt_test.mart_campaign_channel_cost
+[0m14:51:16.690230 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_test.mart_campaign_channel_cost"
+[0m14:51:16.691077 [debug] [Thread-2 (]: Began executing node model.dbt_test.mart_campaign_channel_cost
+[0m14:51:16.734236 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_test.mart_campaign_channel_cost"
+[0m14:51:16.736120 [debug] [Thread-2 (]: Using snowflake connection "model.dbt_test.mart_campaign_channel_cost"
+[0m14:51:16.736821 [debug] [Thread-2 (]: On model.dbt_test.mart_campaign_channel_cost: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "DBT_TEST", "target_name": "prd", "node_id": "model.dbt_test.mart_campaign_channel_cost"} */
+create or replace transient table P_MART.P_MART_SCHEMA.mart_campaign_channel_cost
+         as
+        (
+
+SELECT
+      CHANNEL
+
+    , SUM(
+        (DATEDIFF(day, START_DATE, END_DATE) + 1)
+        * COALESCE(
+            CASE CHANNEL
+                WHEN 'Paid Search' THEN 500
+                WHEN 'Display'     THEN 300
+                WHEN 'Social'      THEN 400
+                WHEN 'Email'       THEN 50
+                WHEN 'Influencer'  THEN 800
+                WHEN 'Video'       THEN 600
+                WHEN 'Mobile'      THEN 350
+            END
+        , 250)
+      ) AS TOTAL_COST
+
+FROM P_SOURCE_DB.P_SOURCE_SCHEMA.P_CAMPAIGNS
+
+GROUP BY CHANNEL
+ORDER BY TOTAL_COST DESC
+        );
+[0m14:51:16.737463 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m14:51:18.230115 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.492 seconds
+[0m14:51:18.268213 [info ] [Thread-2 (]: 1 of 1 OK created sql table model P_MART_SCHEMA.mart_campaign_channel_cost ..... [[32mSUCCESS 1[0m in 1.59s]
+[0m14:51:18.269273 [debug] [Thread-2 (]: Finished running node model.dbt_test.mart_campaign_channel_cost
+[0m14:51:18.271858 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m14:51:18.272389 [debug] [Dummy-1   ]: Connection 'list_P_MART' was properly closed.
+[0m14:51:18.272845 [debug] [Dummy-1   ]: Connection 'model.dbt_test.mart_campaign_channel_cost' was properly closed.
+[0m14:51:18.273365 [info ] [Dummy-1   ]: 
+[0m14:51:18.273883 [info ] [Dummy-1   ]: Finished running 1 table model in 0 hours 0 minutes and 2.49 seconds (2.49s).
+[0m14:51:18.274827 [debug] [Dummy-1   ]: Command end result
+[0m14:51:18.303997 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m14:51:18.306040 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m14:51:18.313511 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m14:51:18.314002 [info ] [Dummy-1   ]: 
+[0m14:51:18.314672 [info ] [Dummy-1   ]: [32mCompleted successfully[0m
+[0m14:51:18.315149 [info ] [Dummy-1   ]: 
+[0m14:51:18.315673 [info ] [Dummy-1   ]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m14:51:18.317371 [debug] [Dummy-1   ]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 4.061057, "process_in_blocks": "0", "process_kernel_time": 0.87, "process_mem_max_rss": "432084", "process_out_blocks": "0", "process_user_time": 4.89}
+[0m14:51:18.318054 [debug] [Dummy-1   ]: Command `cli run` succeeded at 14:51:18.317786 after 4.06 seconds
+[0m14:51:18.318672 [debug] [Dummy-1   ]: Flushing usage events

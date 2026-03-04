@@ -1,7 +1,7 @@
 DBT_TEST:
   target: prd
   outputs:
-    dev:
+    prd:
       type: snowflake
       role: ACCOUNTADMIN
       warehouse: COMPUTE_WH

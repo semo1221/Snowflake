@@ -1,0 +1,1 @@
+{"_invocation_id": "740ce60d-b644-42fc-a339-307be0972b74", "linked": {"0": {"name": "source.dbt_test.marketing.P_CAMPAIGNS", "type": "source", "succ": [1]}, "1": {"name": "model.dbt_test.mart_campaign_channel_cost", "type": "model"}}}

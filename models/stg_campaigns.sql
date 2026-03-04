@@ -1,9 +1,0 @@
-SELECT
-      CAMPAIGN_ID
-    , CHANNEL
-    , OBJECTIVE
-    , TARGET_SEGMENT
-    , CAST(START_DATE AS DATE) AS START_DATE
-    , CAST(END_DATE AS DATE)   AS END_DATE
-    , EXPECTED_UPLIFT
-FROM {{ source('marketing','p_campaigns') }}
