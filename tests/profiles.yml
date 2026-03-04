@@ -1,0 +1,9 @@
+DBT_TEST:
+  target: prd
+  outputs:
+    dev:
+      type: snowflake
+      role: ACCOUNTADMIN
+      warehouse: COMPUTE_WH
+      database: P_MART
+      schema: P_MART_SCHEMA
